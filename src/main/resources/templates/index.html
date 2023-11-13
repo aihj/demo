@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zerobase</title>
+</head>
+<body>
+    <div class="layout"></div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>총건수</th>
+                    <th>관리번호</th>
+                    <th>자치구</th>
+                    <th>와이파이명</th>
+                    <th>도로명주소</th>
+                    <th>상세주소</th>
+                    <th>설치유형</th>
+                    <th>설치기관</th>
+                    <th>서비스구분</th>
+                    <th>망종류</th>
+                    <th>설치년도</th>
+                    <th>실내외구분</th>
+                    <th>위도</th>
+                    <th>경도</th>
+
+
+
+                </tr>
+
+            </thead>
+                <tbody>
+                    <tr th:each="web: ${list}">
+
+                        <td th:text="${web.COUNT}"></td>
+                        <td th:text="${web.MGR_NO}"></td>
+                        <td th:text="${web.WRDOFC}"></td>
+                        <td th:text="${web.MAIN_NM}"></td>
+                        <td th:text="${web.ADRES1}"></td>
+                        <td th:text="${web.ADRES2}"></td>
+                        <td th:text="${web.INSTL_TY}"></td>
+                        <td th:text="${web.INSTL_MBY}"></td>
+                        <td th:text="${web.SVC_SE}"></td>
+                        <td th:text="${web.CMCWR}"></td>
+                        <td th:text="${web.CNSTC_YEAR}"></td>
+                        <td th:text="${web.INOUT_DOOR}"></td>
+                        <td th:text="${web.LNT}"></td>
+                        <td th:text="${web.LAT}"></td>
+
+                    </tr>
+                </tbody>
+        </table>
+
+
+
+</body>
+</html>
